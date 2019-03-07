@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="post"> {% csrf_token %}
+        {% for person in personlist %}
+            <p>{{person.id}}--<a href="{{person.get_absolute_url}}">{{person.name}}</a></p>
+        {% endfor %}
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+
+{% block content %}
+<form action="" method='post'>
+    {% for i in article_list %}
+        <p><a href="{{i.get_absolute_url}}">{{i.title}}</a></p>
+    {% endfor %}
+{% endblock  %}
+</form>
